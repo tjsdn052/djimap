@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp"> <TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Waypoint Configuration"
+    android:textSize="18sp" android:textStyle="bold" android:layout_gravity="center_horizontal"
+    android:layout_marginBottom="16dp"/> <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="center_vertical" android:layout_marginBottom="10dp">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Altitude:"
+        android:layout_marginEnd="8dp"/> <EditText
+    android:id="@+id/altitude"
+    android:layout_width="80dp" android:layout_height="wrap_content"
+    android:inputType="numberDecimal"
+    android:gravity="end"
+    android:hint="100"/> <TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text=" m"
+    android:layout_marginStart="4dp"/>
+</LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" android:layout_marginBottom="10dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Speed:"/>
+        <SeekBar
+            android:id="@+id/speedSeekBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:max="15"
+            android:progress="10" />
+        <TextView
+            android:id="@+id/speedValueTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="10.0 m/s" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Action After Finished:"
+        android:layout_marginTop="10dp"/>
+    <RadioGroup
+        android:id="@+id/actionAfterFinished"
+        android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="vertical"> <RadioButton
+        android:id="@+id/finishNone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="None"/>
+        <RadioButton
+            android:id="@+id/finishGoHome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="GoHome"/>
+        <RadioButton
+            android:id="@+id/finishAutoLanding"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="AutoLand"/>
+        <RadioButton
+            android:id="@+id/finishToFirst"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="BackTo 1st"/>
+    </RadioGroup>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Heading:"
+        android:layout_marginTop="10dp"/>
+    <RadioGroup
+        android:id="@+id/heading"
+        android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="vertical"> <RadioButton
+        android:id="@+id/headingNext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Auto (To Next Waypoint)"/>
+        <RadioButton
+            android:id="@+id/headingInitDirec"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Initial Direction"/>
+        <RadioButton
+            android:id="@+id/headingRC"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="RC Control"/>
+        <RadioButton
+            android:id="@+id/headingWP"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Use Waypoint Heading"/>
+    </RadioGroup>
+</LinearLayout>
